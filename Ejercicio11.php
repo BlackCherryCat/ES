@@ -56,13 +56,13 @@ foreach ($ordenadores[1] as $dato) {
     echo "<br/>";
 }
 
-$ordenadores[0][ob_get_length()] = [
+$ordenadores[0][] = [
     "Marca" => "LENOVO",
     "Procesador" => "INTEL i5",
     "Precio" => 503
 ];
 
-$ordenadores[1][ob_get_length()] = [
+$ordenadores[1][] = [
     "Marca" => "LENOVO",
     "Procesador" => "INTEL i5",
     "Monitor" => "ASUS 23.8p",
