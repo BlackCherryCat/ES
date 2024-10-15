@@ -17,15 +17,14 @@ foreach ($array2 as $key) {
 }
 
 $arraynum = array(1, 2, 3, 4, 5, 6);
-$arraynum2=array();
+$arraynum2 = array();
 foreach ($arraynum as $key) {
     echo "$key <br/>";
-    
 }
 echo "<br/>";
 
 foreach ($arraynum as &$key) {
-    $key=$key*2;
+    $key = $key * 2;
     echo $key . "<br/>";
 }
 var_dump($arraynum);
