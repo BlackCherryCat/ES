@@ -1,6 +1,6 @@
 <?php
 $ordenadores = [
-    [
+    "Portatiles" => [
         [
             "Marca" => "HP",
             "Procesador" => "INTEL i5",
@@ -12,7 +12,7 @@ $ordenadores = [
             "Precio" => 924
         ]
     ],
-    [
+    "Sobremesa" => [
         [
             "Marca" => "HP",
             "Procesador" => "AMD Ryzen 5",
@@ -32,7 +32,7 @@ var_dump($ordenadores);
 
 echo "<h3>Portatiles</h3>";
 echo "<br/>";
-foreach ($ordenadores[0] as $dato) {
+foreach ($ordenadores["Portatiles"] as $dato) {
     echo "Marca: " . $dato["Marca"];
     echo "<br/>";
     echo "Procesador: " . $dato["Procesador"];
@@ -44,7 +44,7 @@ foreach ($ordenadores[0] as $dato) {
 
 echo "<h3>Sobremesa</h3>";
 echo "<br/>";
-foreach ($ordenadores[1] as $dato) {
+foreach ($ordenadores["Sobremesa"] as $dato) {
     echo "Marca: " . $dato["Marca"];
     echo "<br/>";
     echo "Procesador: " . $dato["Procesador"];
@@ -56,13 +56,13 @@ foreach ($ordenadores[1] as $dato) {
     echo "<br/>";
 }
 
-$ordenadores[0][] = [
+$ordenadores["Portatiles"][] = [
     "Marca" => "LENOVO",
     "Procesador" => "INTEL i5",
     "Precio" => 503
 ];
 
-$ordenadores[1][] = [
+$ordenadores["Sobremesa"][] = [
     "Marca" => "LENOVO",
     "Procesador" => "INTEL i5",
     "Monitor" => "ASUS 23.8p",
@@ -71,7 +71,7 @@ $ordenadores[1][] = [
 
 echo "<h3>Portatiles</h3>";
 echo "<br/>";
-foreach ($ordenadores[0] as $dato) {
+foreach ($ordenadores["Portatiles"] as $dato) {
     echo "Marca: " . $dato["Marca"];
     echo "<br/>";
     echo "Procesador: " . $dato["Procesador"];
@@ -83,7 +83,7 @@ foreach ($ordenadores[0] as $dato) {
 
 echo "<h3>Sobremesa</h3>";
 echo "<br/>";
-foreach ($ordenadores[1] as $dato) {
+foreach ($ordenadores["Sobremesa"] as $dato) {
     echo "Marca: " . $dato["Marca"];
     echo "<br/>";
     echo "Procesador: " . $dato["Procesador"];
