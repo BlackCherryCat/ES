@@ -27,10 +27,10 @@
 dashboard/*
 img/*
 webalizer/*
-./applications.html
-./bitnami.css
-./favicon.ico
-./index.php
+applications.html
+bitnami.css
+favicon.ico
+index.php
 
 # Local History for Visual Studio Code
 .history/
