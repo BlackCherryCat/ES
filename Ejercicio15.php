@@ -31,11 +31,12 @@ $articulos = [
 ];
 
 function verContenido($array, $num)
-{
-    if (count($array) < $num - 1 | $num - 1 <= 0) {
+{   
+    $ind = $num - 1;
+    if (count($array) <= $ind | $ind < 0) {
         echo "Estas fuera de rango";
     } else {
-        echo $array[$num - 1][0] . " " . $array[$num - 1][1];
+        echo $array[$ind][0] . " " . $array[$ind][1];
     }
 }
 
