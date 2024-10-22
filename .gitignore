@@ -24,13 +24,13 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
-.dashboard/*
-.img/*
-.webalizer/*
-.applications.html
-.bitnami.css
-.favicon.ico
-.index.php
+dashboard/*
+img/*
+webalizer/*
+applications.html
+bitnami.css
+favicon.ico
+index.php
 
 # Local History for Visual Studio Code
 .history/
