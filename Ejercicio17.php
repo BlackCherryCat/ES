@@ -32,8 +32,7 @@ $articulos = [
 
 function agregarElemento($array, $name, $price)
 {
-    $array[][] = $name;
-    $array[count($array) - 1][1] = $price;
+    $array[$name][] = $price;
     return $array;
 }
 function listarArticulos($array)
