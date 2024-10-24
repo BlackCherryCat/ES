@@ -71,6 +71,7 @@ echo "<br/> <br/>";
 //Sumamos un 15% y lo guardamos
 foreach ($baratos as &$value) {
     $value[1] = $value[1] * 1.15;
+    unset($value);
 }
 
 //mezclamos ambos arrays en uno
@@ -79,7 +80,7 @@ $precio_act = array_merge($articulos, $baratos);
 //Volvemos a mostrar el contenido pero del nuevo array pero ahora con un for
 echo "<table>";
 echo "<tr><th>Articulo</th><th>Precio(€)</th></tr>";
-for ($i = 0; $i < count($precio_act); $i++) {
-    echo "<tr><td>" . $precio_act[$i][0] . "<td/><td>" . $precio_act[$i][1] . "</td> </tr>";
+foreach ($precio_act as $value) {
+    echo "<tr><td>" . $value[0] . "<td/><td>" . $value[1] . "</td> </tr>";
 }
 echo "</table>";
