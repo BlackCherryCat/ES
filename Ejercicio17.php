@@ -30,10 +30,10 @@ $articulos = [
     ]
 ];
 
-function agregarElemento($array, $name, $price)
+function agregarElemento(&$array, $name, $price)
 {
     $array[count($array)] = [$name, $price];
-    return $array;
+    unset($array);
 }
 function listarArticulos($array)
 {
@@ -54,20 +54,20 @@ function calcularPromedio($array)
     }
     return $total / $cont;
 }
-function eliminarArticulo($array, $name)
+function eliminarArticulo(&$array, $name)
 {
     foreach ($array as $key => $value) {
         if ($value[0] == $name) {
             unset($array[$key]);
-            return $array;
         }
     }
+    unset($array);
 }
 
 listarArticulos($articulos);
-$articulos = agregarElemento($articulos, "Ethernet", 22);
-$articulos = agregarElemento($articulos, "Adaptador", 14);
+agregarElemento($articulos, "Ethernet", 22);
+agregarElemento($articulos, "Adaptador", 14);
 listarArticulos($articulos);
-$articulos = eliminarArticulo($articulos, "Monitor");
+eliminarArticulo($articulos, "Monitor");
 listarArticulos($articulos);
 echo "<h3>El promedio de precios es:</h3>" . calcularPromedio($articulos) . "€";
