@@ -12,6 +12,7 @@ function array_limite(&$array, $limit)
             unset($array[$key]);
         }
     }
+    $array=array_values($array);
     unset($array);
 }
 function imprimir_arr($array)
