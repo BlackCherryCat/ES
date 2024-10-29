@@ -7,12 +7,12 @@ for ($i = 0; $i < 20; $i++) {
 
 function array_limite(&$array, $limit)
 {
-    foreach ($array as $key => $value) {
-        if ($value >= $limit) {
-            unset($array[$key]);
+    foreach ($array as $value) {
+        if ($value < $limit) {
+            $newarray[] = $value;
         }
     }
-    $array=array_values($array);
+    $array = $newarray;
     unset($array);
 }
 function imprimir_arr($array)
@@ -26,6 +26,6 @@ function imprimir_arr($array)
 }
 echo "<h3>Array original</h3>";
 imprimir_arr($arraynum);
-array_limite($arraynum,50);
+array_limite($arraynum, 50);
 echo "<h3>Array modificado</h3>";
 imprimir_arr($arraynum);
