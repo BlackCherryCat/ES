@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>CENTRO DE ESTUDIOS</h1>
+      <img src="img_form2/imagen1.PNG" width="100px" />
+      <img src="img_form2/AVANZA.PNG" />
+      <img src="img_form2/imagen1.PNG" width="100px" />
+      <h4>
+        <b><u>IDENTIFICACIÓN</u></b>
+      </h4>
+      <form action="" method="get">
+        <table>
+          <tr>
+            <td>Tipo de documento:</td>
+            <td>
+              <input type="radio" name="id" id="dni" value="dni" />
+              <label for="dni">DNI</label>
+              <input type="radio" name="id" id="nie" value="nie" />
+              <label for="nie">NIE</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Documento</td>
+            <td>
+              <input type="text" id="doc" name="doc" placeholder="DNI o NIE" />
+            </td>
+          </tr>
+          <tr>
+            <td>Nombre y Apellidos</td>
+            <td><input type="text" id="name" name="name" size="50" /></td>
+          </tr>
+          <tr>
+            <td>Teléfono de contacto</td>
+            <td><input type="text" id="tel" name="tel" /></td>
+          </tr>
+        </table>
+        <h4>
+          <b><u>CURSOS DISPONIBLES</u></b>
+        </h4>
+        <select name="opt" id="opt">
+          <option value="">...</option>
+          <option value="progan">Programación Android</option>
+          <option value="ia">Inteligencia Artificial</option>
+          <option value="bigd">Iniciación al BIGDATA</option>
+          <option value="seo">Posicionamiento SEO</option></select
+        ><br />
+        <h4>
+          <b><u>ELEGIR OPCIONES</u></b>
+        </h4>
+        <table>
+          <tr>
+            <td>
+              <u>Matrícula</u>
+            </td>
+            <td>
+              <u>Turno</u>
+            </td>
+            <td><u>Modalidad</u></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="mat" id="com" value="com" />
+              <label for="com">Completa</label>
+            </td>
+            <td>
+              <input type="radio" name="tur" id="mor" value="mor" />
+              <label for="mor">Mañana</label>
+            </td>
+            <td>
+              <input type="radio" name="mod" id="pres" value="pres" />
+              <label for="pres">Presencial</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="mat" id="par" value="par" />
+              <label for="par">Parcial</label>
+            </td>
+            <td>
+              <input type="radio" name="tur" id="eve" value="eve" />
+              <label for="eve">Tarde</label>
+            </td>
+            <td>
+              <input type="radio" name="mod" id="semi" value="semi" />
+              <label for="semi">Semipresencial</label>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <hr style="background-color: gray" size="5" />
+      <h4>NUESTRAS INSTALACIONES</h4>
+      <img src="img_form2/aula1.PNG" />
+      <img src="img_form2/aula2.PNG" height="407px" />
+    </center>
+  </body>
+</html>
