@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>"TECNOLOGÍA DOMÓTICA"</h1>
+    <img src="img_form1/img1.png" />
+    <img src="img_form1/img2.png" />
+    <h2>Oferta de subscripción durante un año</h2>
+    <h3>Precios hasta el 15 de diciembre:</h3>
+    <ul type="square">
+      <li>Pago mensual......4,50€ al mes</li>
+      <li>Pago semestral....25,00€ al semestre</li>
+      <li>Pago anual............50,00€ al año</li>
+    </ul>
+    <h2>FORMULARIO DE SUBSCRIPCIÓN</h2>
+    <form action="" method="get">
+      <table>
+        <tr>
+          <td>
+            <label for="fname"><b>Nombre:</b></label>
+          </td>
+          <td>
+            <input type="text" id="fname" name="fname" />
+            <label for="fnac">F.nac.:</label>
+            <input type="date" id="fnac" name="fnac" />
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="lname"><b>Apellidos:</b></label>
+          </td>
+          <td><input type="text" id="lname" name="lname" size="48" /></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="street"><b>Calle y número:</b></label>
+          </td>
+          <td><input type="text" id="street" name="street" size="48" /></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="codpos"><b>Código Postal:</b></label>
+          </td>
+          <td>
+            <input type="number" id="codpos" name="codpos" size="10" />
+            <label for="city">Ciudad:</label>
+            <input type="text" id="city" name="city" size="40" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="prov"><b>Provincia:</b></label>
+          </td>
+          <td>
+            <input type="text" id="prov" name="prov" size="28" />
+            <label for="tel">Telefono:</label>
+            <input type="number" id="tel" name="tel" size="20" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="opt"><b>Opción:</b></label>
+          </td>
+          <td>
+            <a>Escoja una opción de subscripción</a><br />
+
+            <select name="opt" id="opt">
+              <option value="">...</option>
+              <option value="mon">Mensual</option>
+              <option value="sem">Semestral</option>
+              <option value="anu">Anual</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="payment"><b>Forma de pago</b></label>
+          </td>
+          <td>
+            <a>Escoja una forma de pago</a><br />
+            <input type="radio" name="payment" id="card" value="card" />
+            <label for="card">Tarjeta de crédito</label>
+            <input type="radio" name="payment" id="paypal" value="paypal" />
+            <label for="paypal">Paypal</label>
+            <input type="radio" name="payment" id="bizum" value="bizum" />
+            <label for="bizum">Bizum</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="comments"
+              ><b>Comentarios <br /><a>personales:</a></b></label
+            >
+          </td>
+          <td>
+            <textarea
+              rows="2"
+              cols="50"
+              name="comments"
+              id="comments"></textarea>
+          </td>
+        </tr>
+      </table>
+      <br />
+      <a>Pulse para verificar</a>
+      <button type="submit">
+        <img src="img_form1/img3.png" /></button
+      ><br />
+      <button type="reset"><img src="img_form1/img4.png" /> Anular</button>
+    </form>
+  </body>
+</html>
