@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #php {
+        color: rgb(168, 125, 168);
+        text-shadow: 1px 1px 1px black, 0 0 0.1em black;
+      }
+      #javasc {
+        color: yellow;
+        text-shadow: 2px 2px 2px black, 0 0 0.1em black;
+      }
+      #python {
+        color: rgb(56, 139, 190);
+        text-shadow: 1px 1px 1px black, 0 0 0.1em black;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Formulario Lenguajes de programación</h1>
+    <form action="Ejercicio23.php" method="post" autocomplete="off">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" size="18" required />
+      <br />
+      <br />
+      <fieldset>
+        <legend>Lenguaje de programación favorito</legend>
+        <input type="radio" name="lang" id="php" value="PHP" required />
+        <label for="php" id="php">PHP</label>
+        <br />
+        <input
+          type="radio"
+          name="lang"
+          id="javasc"
+          value="JavaScript"
+          required />
+        <label for="javasc" id="javasc">JavaScript</label>
+        <br />
+        <input type="radio" name="lang" id="python" value="Python" required />
+        <label for="python" id="python">Python</label>
+      </fieldset>
+
+      <br />
+      <br />
+      <label for="lvl">Nivel de experiencia: </label>
+      <select name="lvl" id="lvl">
+        <option value="">...</option>
+        <option value="Principiante">Principiante</option>
+        <option value="Intermedio">Intermedio</option>
+        <option value="Avanzado">Avanzado</option>
+      </select>
+      <br />
+      <br />
+      <input type="checkbox" name="news" id="news" />
+      <label for="news"> Deseo recibir más información y noticias</label> <br />
+      <br />
+      <button type="submit">Enviar</button>
+      <button type="reset">Borrar</button>
+    </form>
+  </body>
+</html>
