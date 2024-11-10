@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Cita para el medico</h1>
+    <form action="Ejercicio24.php" method="post" autocomplete="off">
+      <label for="name">Nombre completo:</label>
+      <input type="text" id="name" name="name" size="30" required />
+      <label for="seg">Número de seguridad social:</label>
+      <input
+        type="text"
+        id="seg"
+        name="seg"
+        size="12"
+        maxlength="12"
+        required />
+      <br />
+      <br />
+      <fieldset>
+        <legend>Tipo de consulta</legend>
+        <input
+          type="radio"
+          name="type"
+          id="med"
+          value="medicina general"
+          required />
+        <label for="med" id="med">Medicina general</label>
+        <br />
+        <input type="radio" name="type" id="ped" value="pediatria" required />
+        <label for="ped" id="ped">Pediatría</label>
+      </fieldset>
+      <br />
+      <label for="date">Fecha de la cita</label>
+      <input type="date" id="date" name="date" required /><br /><br />
+      <label for="time">Horario preferido: </label>
+      <select name="time" id="time">
+        <option value="">...</option>
+        <option value="mañana">Mañana (09:00 - 12:30)</option>
+        <option value="tarde">Tarde (13:00 - 16:00)</option>
+        <option value="noche">Noche (17:00 - 20:00)</option>
+      </select>
+      <br />
+      <br />
+      <button type="submit">Enviar</button>
+      <button type="reset">Borrar</button>
+    </form>
+  </body>
+</html>
