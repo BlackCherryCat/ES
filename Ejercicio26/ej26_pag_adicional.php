@@ -1,10 +1,12 @@
 <?php
 session_start();
-$nombre = $_POST["name"];
-$apellidos = $_POST["lname"];
-$edad = $_POST["age"];
-$email = $_POST["mail"];
-$provincia = $_POST["prov"];
+//Usamos htmlspecialchars() para evitar que php interprete las etiquetas html que el usuario pueda meter por el formulario.
+//Todo será tratado como un texto
+$nombre = htmlspecialchars($_POST["name"]);
+$apellidos = htmlspecialchars($_POST["lname"]);
+$edad = htmlspecialchars($_POST["age"]);
+$email = htmlspecialchars($_POST["mail"]);
+$provincia = htmlspecialchars($_POST["prov"]);
 $_SESSION["name"] = $nombre;
 $_SESSION["lname"] = $apellidos;
 $_SESSION["age"] = $edad;
@@ -25,8 +27,8 @@ $_SESSION["prov"] = $provincia;
     <p>El nombre de <?php echo $_SESSION["user"] ?> es <?php echo $_SESSION["name"] ?></p>
     <p>El apellido de <?php echo $_SESSION["user"] ?> es <?php echo $_SESSION["lname"] ?></p>
     <p>Con una edad de <?php echo $_SESSION["age"] ?></p>
-    <p>Su correo es <?php echo $_SESSION["mail"] ?></p>
     <p>Vive en <?php echo $_SESSION["prov"] ?></p>
+    <p><a href="ej26_bienvenida.php">Volver</a></p>
 </body>
 
 </html>
