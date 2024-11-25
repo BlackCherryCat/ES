@@ -2,16 +2,20 @@
 session_start();
 //Usamos htmlspecialchars() para evitar que php interprete las etiquetas html que el usuario pueda meter por el formulario.
 //Todo será tratado como un texto
-$nombre = htmlspecialchars($_POST["name"]);
-$apellidos = htmlspecialchars($_POST["lname"]);
-$edad = htmlspecialchars($_POST["age"]);
-$email = htmlspecialchars($_POST["mail"]);
-$provincia = htmlspecialchars($_POST["prov"]);
-$_SESSION["name"] = $nombre;
-$_SESSION["lname"] = $apellidos;
-$_SESSION["age"] = $edad;
-$_SESSION["mail"] = $email;
-$_SESSION["prov"] = $provincia;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = htmlspecialchars($_POST["name"]);
+    $apellidos = htmlspecialchars($_POST["lname"]);
+    $edad = htmlspecialchars($_POST["age"]);
+    $email = htmlspecialchars($_POST["mail"]);
+    $provincia = htmlspecialchars($_POST["prov"]);
+    $_SESSION["name"] = $nombre;
+    $_SESSION["lname"] = $apellidos;
+    $_SESSION["age"] = $edad;
+    $_SESSION["mail"] = $email;
+    $_SESSION["prov"] = $provincia;
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,11 +27,42 @@ $_SESSION["prov"] = $provincia;
 </head>
 
 <body>
-    <h2>Información de <?php echo $_SESSION["user"] ?></h2>
-    <p>El nombre de <?php echo $_SESSION["user"] ?> es <?php echo $_SESSION["name"] ?></p>
-    <p>El apellido de <?php echo $_SESSION["user"] ?> es <?php echo $_SESSION["lname"] ?></p>
-    <p>Con una edad de <?php echo $_SESSION["age"] ?></p>
-    <p>Vive en <?php echo $_SESSION["prov"] ?></p>
+
+    <h2>Información del usuario</h2>
+    <?php
+    if (isset($_SESSION["name"])) {
+        if ($_SESSION["name"] != "") {
+            echo '<p>El nombre de ' . $_SESSION["user"] . ' es ' .  $_SESSION["name"]  . '</p>';
+        }
+    }
+    ?>
+    <?php
+    if (isset($_SESSION["lname"])) {
+        if ($_SESSION["lname"] != "") {
+            echo '<p>El apellido de ' . $_SESSION["user"] . ' es ' . $_SESSION["lname"] . '</p>';
+        }
+    }
+    ?>
+    <?php
+    if (isset($_SESSION["lname"])) {
+        if ($_SESSION["age"] != "") {
+            echo '<p>Tiene una edad de ' . $_SESSION["age"] . ' años </p>';
+        }
+    }
+    ?>
+    <?php
+    if (isset($_SESSION["prov"])) {
+        if ($_SESSION["prov"] != "") {
+            echo '<p>Vive en ' . $_SESSION["prov"] . '</p>';
+        }
+    }
+    ?>
+    <?php
+    if (!isset($_SESSION["name"]) & !isset($_SESSION["lname"]) & !isset($_SESSION["age"]) & !isset($_SESSION["prov"])) {
+        echo '<p>No se ha introducido ningun dato personal</p>
+        <a href="ej26_datos_personales.php"><button>Ir al formulario</button></a>';
+    }
+    ?>
     <p><a href="ej26_bienvenida.php">Volver</a></p>
 </body>
 
