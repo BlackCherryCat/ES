@@ -26,7 +26,7 @@ echo "La posicion 4 es " . $vector1[3];
 echo "</br>";
 echo "El alumno " . $vectormix["nombre"] . " tiene " . $vectormix["edad"] . " años.";
 echo "</br>";
-var_dump($vectormix); //informacion de variables y su contenidos
+var_dump($vectormix); //informacion de variables y su contenido
 
 for ($i=1; $i <= 10; $i++) { 
     echo "<p> 7 x " . $i . " = " . 7*$i . "<p/>";
